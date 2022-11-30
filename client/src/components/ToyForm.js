@@ -35,6 +35,7 @@ function ToyForm({ onAddToy }) {
           image: "",
         });
         onAddToy(newToy);
+        console.log(newToy);
       });
   }
 

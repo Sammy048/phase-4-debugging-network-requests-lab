@@ -13,7 +13,8 @@ function ToyCard({ toy, onDeleteToy, onUpdateToy }) {
     });
   }
 
-  function handleLikeClick() {
+  function handleLikeClick(e) {
+    e.preventDefault();
     const updateObj = {
       likes: toy.likes + 1,
     };
@@ -27,6 +28,7 @@ function ToyCard({ toy, onDeleteToy, onUpdateToy }) {
     })
       .then((r) => r.json())
       .then((updatedToy) => onUpdateToy(updatedToy));
+  
   }
 
   return (
